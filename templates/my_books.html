@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings - Sports Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+        
+        .user-info {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .username {
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .logout-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: #ff5252;
+        }
+        
+        .bookings-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .booking-card {
+            background: #f9f9f9;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .booking-card:hover {
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+            transform: translateX(5px);
+        }
+        
+        .booking-info h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+        
+        .booking-info p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .booking-time {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .booking-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cancel-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .cancel-btn:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .empty-state h2 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn.secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn.secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .user-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .booking-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 My Bookings</h1>
+            <div class="user-info">
+                <div class="username">👤 {{ username }}</div>
+                <a href="/logout" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        
+        {% if bookings %}
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">{{ bookings|length }}</div>
+                <div class="stat-label">Total Bookings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">✓</div>
+                <div class="stat-label">All Confirmed</div>
+            </div>
+        </div>
+        
+        <div class="bookings-list">
+            {% for booking in bookings %}
+            <div class="booking-card">
+                <div class="booking-info">
+                    <h3>{{ booking[0] }}</h3>
+                    <p class="booking-time">📅 {{ booking[1] }}</p>
+                </div>
+                <div class="booking-actions">
+                    <a href="/cancel/{{ booking[2] }}" class="cancel-btn" 
+                       onclick="return confirm('Are you sure you want to cancel this booking?')">
+                        Cancel Booking
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="action-buttons">
+            <a href="/book" class="btn">📅 Book More Slots</a>
+            <a href="/" class="btn secondary">🏠 Back to Home</a>
+        </div>
+        
+        {% else %}
+        <div class="empty-state">
+            <h2>📭 No Bookings Yet</h2>
+            <p>You haven't booked any facilities yet. Start by exploring available slots!</p>
+            <div class="action-buttons">
+                <a href="/book" class="btn">📅 Book a Facility</a>
+                <a href="/" class="btn secondary">🏠 Back to Home</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
