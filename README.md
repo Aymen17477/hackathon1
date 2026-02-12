@@ -1,5 +1,15 @@
 #COLLEGE SPORTS FACILITIES RESERVATION SYSTEM
 
+##TEAM:
+
+Name: Dagestan FC
+
+-Santhosh Srinivasan
+
+-Shaik Mohammed Aymen
+
+-Ram Mouli
+
 A web-app to reserve sport facilites 
 
 Problem Statement 1.6: Open Innovation (Level 1)
@@ -84,10 +94,8 @@ Access the site
 + A lot alignment issues we had to solve, multiple times the webapp breaking down
 
 
-##TEAM:
+##Demo Video Link
 
--Santhosh Srinivasan
+https://drive.google.com/drive/folders/1R404x395wpVP7qg2SmmfsvFI2jbmKPPN?usp=drive_link
 
--Shaik Mohammed Aymen
 
--Ram Mouli
