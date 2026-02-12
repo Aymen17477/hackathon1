@@ -11,7 +11,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0f1419;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -20,16 +20,17 @@
         }
         
         .container {
-            background: white;
+            background: #1a1f2e;
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             max-width: 400px;
             width: 100%;
+            border: 1px solid #2d3748;
         }
         
         h1 {
-            color: #333;
+            color: #60a5fa;
             margin-bottom: 10px;
             text-align: center;
             font-size: 2em;
@@ -39,7 +40,7 @@
             display: flex;
             gap: 0;
             margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #2d3748;
         }
         
         .tab-button {
@@ -49,7 +50,7 @@
             border: none;
             font-size: 1em;
             font-weight: bold;
-            color: #999;
+            color: #718096;
             cursor: pointer;
             padding-bottom: 10px;
             border-bottom: 3px solid transparent;
@@ -57,8 +58,8 @@
         }
         
         .tab-button.active {
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
+            color: #60a5fa;
+            border-bottom: 3px solid #3b82f6;
         }
         
         .form-group {
@@ -67,7 +68,7 @@
         
         label {
             display: block;
-            color: #333;
+            color: #a0aec0;
             font-weight: bold;
             margin-bottom: 8px;
         }
@@ -75,21 +76,23 @@
         input {
             width: 100%;
             padding: 12px;
-            border: 2px solid #eee;
+            border: 1px solid #2d3748;
             border-radius: 8px;
             font-size: 1em;
+            background: #242d3d;
+            color: #a0aec0;
             transition: border-color 0.3s;
         }
         
         input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #3b82f6;
         }
         
         button {
             width: 100%;
             padding: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -104,33 +107,34 @@
         }
         
         button.secondary {
-            background: #f0f0f0;
-            color: #333;
+            background: #2d3748;
+            color: #a0aec0;
+            border: 1px solid #3b82f6;
             margin-top: 10px;
             margin-bottom: 0;
         }
         
         button.secondary:hover {
-            background: #e0e0e0;
+            background: #3b4758;
         }
         
         .error {
-            background: #ffebee;
-            color: #c62828;
+            background: #3f2d28;
+            color: #fca5a5;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
-            border-left: 4px solid #c62828;
+            border-left: 4px solid #dc2626;
         }
         
         .link {
             text-align: center;
-            color: #666;
+            color: #718096;
             margin-top: 15px;
         }
         
         .link a {
-            color: #667eea;
+            color: #60a5fa;
             text-decoration: none;
             font-weight: bold;
         }
@@ -141,7 +145,7 @@
         }
         
         .home-link a {
-            color: #667eea;
+            color: #60a5fa;
             text-decoration: none;
             font-weight: bold;
         }
