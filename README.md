@@ -36,6 +36,7 @@ A web-based sports facility booking system. Students can log in, browse sports f
 
 ##TECH STACK:
 
+
 +Backend: Python (Flask)
 +Frontend: HTML and CSS (Jinja Templates)
 +Database: SQLite3
@@ -82,6 +83,7 @@ Access the site
 
 
 ##TEAM:
+
 -Santhosh Srinivasan
 
 -Shaik Mohammed Aymen
