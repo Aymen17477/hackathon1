@@ -2,16 +2,18 @@
 
 A web-app to reserve sport facilites 
 
-Problem Statement 1.6: Open Innovation (Level 1)¶
+Problem Statement 1.6: Open Innovation (Level 1)
+
 Category: Free Choice
 
 ##DESCRIPTION
 
-With the new courts built, we identified theres issues where clashes happen between multiple groups wanting to play in the same time, thereby making this system which gives a structured solution to this problem. Colleges lack a centralized, real-time system for managing sports facility bookings. Students face difficulties in checking availability, reserving slots, and coordinating with other players, leading to inefficiencies, scheduling conflicts, and underutilization of resources.
+With the construction of the new courts, we discovered that conflicts arose between students attempting to play simultaneously, so we developed a system that provides an organized solution to this issue. There is no centralized, real-time system in place at colleges to handle reservations for sports facilities. Students struggle to reserve slots, check availability, and coordinate with other players, which results in scheduling conflicts.
+
 
 ##SOLUTION:
 
-A web-based sports facility booking system. Students can log in, browse sports facilities, view available slots, book courts/fields, and manage their bookings.
+A web-based sports facility booking system. Students can log in, browse sports facilities, view available slots, book courts/fields, and manage their bookings.They can also cancel the bookings and look at if other slots are booked to avoid double booking
 
 ##FEATURES:
 
@@ -27,7 +29,10 @@ A web-based sports facility booking system. Students can log in, browse sports f
 
 +Cancel bookings anytime
 
++Easy Navigation across the website
+
 +SQLite database storage
+
 
 ##TECH STACK:
 
@@ -35,21 +40,45 @@ A web-based sports facility booking system. Students can log in, browse sports f
 +Frontend: HTML and CSS (Jinja Templates)
 +Database: SQLite3
 
+
 ##SETUP PROCESS:
 
 Create a repo on github
 
+
 Clone the repo
 
-Activate the virtual environment:
 
-Install dependencies using the requirements file:
+Activate the virtual environment
 
-Run the application:
 
-Execute python app.py to start the Flask server.
+Install dependencies using the requirements file
+
+
+Run the application
+
+
+Execute python app.py to start the Flask server
+
 
 Access the site
+
+
+##Learnings and Challeneges
+
++ Trouble with pushing and pulling changes
+
++ Differentiating between local and remote repositories
+
++ As first year college students navigating and figuring out git and github 
+
++ Difficulties with branches 
+
++ In the end we learnt a lot and became familiar with github
+  
++  We learnt to implement flask, a database software and revisited html
+
++ A lot alignment issues we had to solve, multiple times the webapp breaking down
 
 
 ##TEAM:
