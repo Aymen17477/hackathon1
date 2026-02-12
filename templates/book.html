@@ -311,7 +311,7 @@
                 <ul class="facility-list">
                     {% for facility in facilities %}
                     <li class="facility-item {% if facility[0] == selected_facility %}active{% endif %}"
-                        onclick="selectFacility({{ facility[0] }})">
+                        onclick="selectFacility('{{ facility[0] }}')">
                         <div class="facility-name">{{ facility[1] }}</div>
                         <div class="facility-count">{{ facility[3] }} court(s) • {{ facility[2] }}</div>
                     </li>
