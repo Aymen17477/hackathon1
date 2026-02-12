@@ -38,7 +38,9 @@ A web-based sports facility booking system. Students can log in, browse sports f
 
 
 +Backend: Python (Flask)
+
 +Frontend: HTML and CSS (Jinja Templates)
+
 +Database: SQLite3
 
 
