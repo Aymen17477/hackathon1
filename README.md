@@ -6,6 +6,7 @@ Problem Statement 1.6: Open Innovation (Level 1)¶
 Category: Free Choice
 
 ##DESCRIPTION
+
 With the new courts built, we identified theres issues where clashes happen between multiple groups wanting to play in the same time, thereby making this system which gives a structured solution to this problem. Colleges lack a centralized, real-time system for managing sports facility bookings. Students face difficulties in checking availability, reserving slots, and coordinating with other players, leading to inefficiencies, scheduling conflicts, and underutilization of resources.
 
 ##SOLUTION:
@@ -36,9 +37,9 @@ A web-based sports facility booking system. Students can log in, browse sports f
 
 ##SETUP PROCESS:
 
-create a repo on github
+Create a repo on github
 
-clone the repo
+Clone the repo
 
 Activate the virtual environment:
 
@@ -50,7 +51,10 @@ Execute python app.py to start the Flask server.
 
 Access the site
 
+
 ##TEAM:
 -Santhosh Srinivasan
+
 -Shaik Mohammed Aymen
+
 -Ram Mouli
